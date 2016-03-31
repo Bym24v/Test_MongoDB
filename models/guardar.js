@@ -4,7 +4,7 @@ var ObjectId = require('mongodb').ObjectID;
 
 var config = require('./../config');
 
-var insertDocument = function(db, callback) {
+var guardarJugador = function(db, callback) {
   
    db.collection('test').insertOne( {
       "player" : {
@@ -30,7 +30,7 @@ var Guardar = {
         
           assert.equal(null, err);
           
-          insertDocument(db, function() {
+          guardarJugador(db, function() {
               db.close();
           });
           

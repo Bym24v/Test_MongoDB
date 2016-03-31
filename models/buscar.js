@@ -4,9 +4,9 @@ var ObjectId = require('mongodb').ObjectID;
 
 var config = require('./../config');
 
-var findRestaurants = function(db, callback) {
+var buscarJugador = function(db, callback) {
     
-   var cursor =db.collection('test').find( );
+   var cursor =db.collection('test').find( {"player.name": "Manuel"});
     
    cursor.each(function(err, doc) {
        
@@ -30,7 +30,7 @@ var Buscar = {
             
           assert.equal(null, err);
             
-          findRestaurants(db, function() {
+          buscarJugador(db, function() {
               db.close();
           });
             
