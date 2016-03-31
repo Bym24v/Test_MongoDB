@@ -16,7 +16,7 @@ require('http').createServer(function(request, response){
 
 
 
-var mongo = require('./models/actualizar');
+var mongo = require('./models/borrar');
 
 mongo.init();
 
